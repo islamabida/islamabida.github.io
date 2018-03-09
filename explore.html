@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #65646b;
+	  font-family: 'Noto Serif', serif;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+	  font-family: 'Noto Serif', serif;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+	  background: url(http://www.piusamaa.ee/wp-content/uploads/2016/09/tourism-destinations.jpg);
+      background-size: cover;
+	  height: 500px;
+	  color: #fff;
+      padding: 100px 25px;
+      font-family: 'Noto Serif', serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color:  #5DADE2;
+  }
+  .carousel-indicators li {
+      border-color:  #5DADE2;
+  }
+  .carousel-indicators li.active {
+      background-color: #5DADE2;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #5DADE2 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #D62D35;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #5DADE2  ;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: 'Abril Fatface', cursive;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Log In or Sign Up</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PACKAGES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Explore</h1> 
+  <p>Explore the entire world with us</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About the Page</h2><br>
+      <h4>Founded on 4th July of 2009 in New York,United States.Explore is a trusted community marketplace for people to list ,discover and book unique accommodations around the world.Explore connects people to unique travel experiences at any price point, more than 47,000 cities and 170 countries.With best world-class customer service ,Explore is the easiest way for people to monetize their extra space and showcase it to an audience of millions.</h4><br>
+      <p>Our travel guides, which are curated by Travel plus Leisure editors and a network of local correspondents, highlight the best hotels, restaurants, shops, bars, and things to do in the world's most exciting destinations. Browse our in-depth travel information for great ideas and insider finds, plus smart travel tips that will have you feeling like a local in no time. </p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://ww1.prweb.com/prfiles/2012/05/17/9520997/eXplore-logo.png" width="300px"></img src>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="http://www.rhemastar.com/wp-content/uploads/2018/01/core-value-icon.png" width="200px"></img src>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> To strengthen our position as the leading tourism company providing quality, creative, innovative, competitive and socially responsible services in the region.</h4><br>
+      <p><strong>VISION:</strong> We are a team that creates unique and socially responsible travel experiences, providing services beyond expectations.We always work thinking of you, of your needs, but above all, of your expectations. We know that every detail is important, and for this reason make our best effort to care for all those "little things" which will always make the difference so that your trip will be exceptional.Our service is characterized by being flexible and creative in the design of itineraries; for this we are diligent in the selection of our transport personnel, guides and all those persons involved in the operation.Our clients come from the United States, Argentina, Germany, England, Colombia, Holland, Belgium, and Portugal among other countries and every day we expand our horizons to work with new markets from all over the world.
+</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Car_pictogram.svg/780px-Car_pictogram.svg.png"width="300px"></img src>
+      <h4>Tourism Transportation</h4>
+      <p>The Tourism Transportation Department of the Explore Tourism Company polices, investigates, intervenes and when necessary sanctions all persons and organizations providing ground transportation to visitors. These include vehicles such as taxis, excursion buses, shuttles, charter buses, limousines, among others.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://openclipart.org/download/233062/CompassRose.svg"width="200px"></img src>
+      <h4>Tour Guide</h4>
+      <p>Our tour guides are  professionals and they offer not only information, but enhance the image of a destination as well as the way a visitor experiences a location or attraction.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAdVBMVEUAAAD///+enp5QUFBWVlZHR0dhYWFAQEAaGhrx8fF/f3+ZmZmurq709PTs7OwQEBA0NDS4uLgsLCzGxsbb29vk5OSIiIgPDw8YGBhubm4gICCkpKR2dnZmZmZRUVExMTE8PDySkpLLy8u+vr7X19daWlonJycc4BqOAAADiElEQVR4nO3d6XaiQBCG4TYucSUaFdfEEJf7v8RRYzciUK1WMSnI9/4cerp5TgzHkNiYWkUyv30CUgGiLUC0BYi2ANEWINoCRFuAaAsQbQGirUIg08mpcbLdxDUdyK8pDpn2Gu8zQzc71HtT4XWFIbuWD2F7W8hSZCHRvYxT877k0qKQxQOMUz3BtSUh4YMOY0ZyiwtCdg87TDsQW10Q0nocYkKx1eUgwdsTkI3Y8nKQ7RMOMxO7BstB+s9AzFZq+QIgh76vUXydFrtuFQAZ+seuqgJ5ASQ3QFIBIhMgqQCRCZBUgMgESCpAZAIklU7I4KY7ZhrZc/vyj41/LB7fMfNdJ5OGdEbdz82yfd184Y5+d/Pa23Nb9ny9xHeO9rnzrdyaH/PE2SyHjXCc0txCvj/aJt3eHe9lHC2m+Av7mXH00J1QkN0+4/8ca7kRL9kDCqjp1mxkHp+tE7cpE5Aw72a6RsjxNXx9O/8KEtRzJ9UJMWadBZkO8yfVCrn65nWQYENMqhYSn5mDNKlJ9UJM9wbSJSdVDLHvDS6Qb3pSzZBl5xpCvrB0Qy4vrh/I2DOpashbEEN8vzVTDTGRg3h/a6YbMnSQkWekcoiZWAh97TXqISsLyXqfnEg5ZG0hr76RyiF1C3n3jVQOea0aZHDwjSwJpJP1Y3oiQBgBQgUII0CoAGEECBUgjP4yJJj7RpYF4v2LXUAYAUIFCCNAqABhBAgVIIwAoQKEESBUgDAChKosEO+n0MsCqcpXpDK3gwApNECoAGEECBUgjAChAoQRIFSAMAKEChBGgFABwggQKkAYAUIFCCNAqABhBAgVIIwAoQKEESBUgDD6y58MrVF7u5wrC6QqHzoGpNAAoQKEESBUgDAChAoQRoBQAcLoGQixZ+ZPyiFNC/HsCage0rIQ7xOolENCC4l8I5VDRhbifQSVbsj5YVhnyMB3P0g35HTRumw4+eEZqhsSxZDKbAFamU1Zy7xN7uWZinbj4jU5WDPkslW5hQy+qMGKIfYhA25P7Cl1J1sv5LN2C6lNiPfAaiGNQRpSC/IvXVohmRvgH4vyPpCoE3LIeSTB6RtlkU3RCFmGiUd3JCFHStTMsDTc8d94bEfGS77dWHWSJ34LOVm2Ubje16+L3MFt/X/VdWuGiX/fr8PeOP1g4QxIOQNEW4BoCxBtAaItQLQFiLYA0RYg2gJEW5WB/AOlGnEVxtXchwAAAABJRU5ErkJggg=="></img src>
+      <h4>Travel Agents</h4>
+      <p> We offer advice on transportation, itineraries, accommodations and details pertaining to travel.Our tourism transportation department oversees travel agencies’ compliance regarding their regulatory obligations and serves as an arbiter when customer issues arise. </p>
+    </div>
+  </div>
+  <br><br>
+  
+    
+	
+</div>
+	<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>Visit</h4>
+  <div class="row text-center slideanim">
+	  
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://static1.eurocentres.com/cdn/farfuture/83ZTKH3XL9C4xe4PgBNQC23NFo5vn37MvZ_G4sDQ3Zk/mtime:1505483245/sites/default/files/styles/ec_slider_content_breakpoints_theme_ec_responsive_full_1_5x/public/par_eiffel_1400x650.jpg?itok=gCyXICEG&timestamp=1505483222" alt="Paris" width="400px" height="300px">
+        <p><strong>Paris</strong></p>
+        
+      </div>
+    </div>
+	
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://i.ytimg.com/vi/WYFe2-hqA2Q/maxresdefault.jpg" alt="Singapore" width="400px" height="300px">
+        <p><strong>Singapore</strong></p>
+        
+      </div>
+    </div>
+	
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://cdn4.i-scmp.com/sites/default/files/styles/landscape/public/images/methode/2017/06/30/6b749b0a-5c85-11e7-98d7-232f56a99798_1280x720_210532.JPG?itok=Uryswr7J" width="400px" height="300px">
+        <p><strong>Hong Kong</strong></p>
+       
+      </div>
+     </div>
+	</div> 
+	
+   <div class="row text-center slideanim">
+	  <div class="col-sm-4">
+     <div class="thumbnail">
+       <img src="https://www.theflightdeal.com/wp-content/uploads/2014/08/dubai_august.jpg" alt="United Arab Emirates" width="400px" height="300px">
+       <p><strong>Dubai</strong></p>
+       
+     </div>
+ </div>
+ 
+	  <div class="col-sm-4">
+     <div class="thumbnail">
+       <img src="http://portuguese-american-journal.com/wp-content/uploads/2017/06/Sagres.jpg" width="400px" height="300px">
+       <p><strong>Portugal</strong></p>
+       
+     </div>
+ </div>
+ 
+	  <div class="col-sm-4">
+     <div class="thumbnail">
+       <img src="http://secretshotel.net/wp-content/uploads/2017/04/Places-to-Visit-in-Australia.jpg" width="400px" height="300px">
+       <p><strong>Sydney</strong></p>
+       
+	   </div>
+ </div>
+</div>
+
+  <div class="row text-center slideanim">
+  <div class="col-sm-4">
+ <div class="thumbnail">
+  <img src="http://cdn.touropia.com/gfx/b/2017/09/bangkok_hotel3.jpg" width="400px" height="300px">
+   <p><strong>Thailand</strong></p>
+      
+	   </div>
+   </div>
+   
+    <div class="col-sm-4">
+   <div class="thumbnail">
+    <img src="http://remixmagazine.com/wp-content/uploads/2016/05/1-NZ.jpg"width="400px" height="300px">
+     <p><strong>New Zealand</strong></p>
+         </div>
+     </div>
+	 
+	  <div class="col-sm-4">
+	 <div class="thumbnail">
+	  <img src="http://www.uniuddicaorientamentotutorato.it/img/fullsize/rome_italy_beautiful_city_800x600.jpg"width="400px" height="300px">
+	   <p><strong>Florence</strong></p>
+	       </div>
+	   </div>
+	  </div>
+	  
+	<div class="row text-center slideanim"> 
+  	  <div class="col-sm-4">
+  	 <div class="thumbnail">
+  	  <img src="https://travel.usnews.com/static-travel/images/destinations/103/gettyimages-142761840.jpg"width="400px" height="300px">
+  	   <p><strong>Prague</strong></p>
+  	       </div>
+  	   </div>
+	   
+    	  <div class="col-sm-4">
+    	 <div class="thumbnail">
+    	  <img src="https://travel.usnews.com/static-travel/images/destinations/89/73829851.jpg" width="400px" height="300px">
+    	   <p><strong>Madrid</strong></p>
+    	       </div>
+    	   </div>
+		   
+      	  <div class="col-sm-4">
+      	 <div class="thumbnail">
+      	  <img src="https://travel.usnews.com/static-travel/images/destinations/279/bali_pura_ulun_danu_bratan_temple_sun_getty_afriandi.jpg" width="400px" height="300px">
+      	   <p><strong>Bali</strong></p>
+      	       </div>
+      	   </div>
+		   
+     </div>
+<br>
+  
+  <h2>Comments</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"I would  say this company is the best. very professional!They provide the best services !"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+      <div class="item">
+        <h4>"This was the best vacation I've ever had"<br><span>Dr.John watson</span></h4>
+      </div>
+      <div class="item">
+        <h4>"What I love most about this company is ,they're so kind and their office staffs are professionally skilled"<br><span>Mycroft Holmes</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Packages</h2>
+    <h4>Our payment policy</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Accomodation</h1>
+        </div>
+        <div class="panel-body">
+          
+        <p><strong>1. 34 tours or more packages</strong> $5000</p>
+		<p><strong>1. 24 tours or more packages</strong> $3000</p>
+		<p><strong>1. 10 tours or more packages</strong> $1500</p>
+         
+        
+        </div>
+        <div class="panel-footer">
+          
+        <button class="btn btn-lg">Select 1</button>
+	  <button class="btn btn-lg">Select 2</button>
+	  <button class="btn btn-lg">Select 3</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Transportation</h1>
+        </div>
+        <div class="panel-body">
+	        <p><strong>1. 34 tours or more packages</strong> $2000</p>
+			<p><strong>1. 24 tours or more packages</strong> $100</p>
+			<p><strong>1. 10 tours or more packages</strong> $700</p>
+          
+        </div>
+        <div class="panel-footer">
+         
+          
+	        <button class="btn btn-lg">Select 1</button>
+		  <button class="btn btn-lg">Select 2</button>
+		  <button class="btn btn-lg">Select 3</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Booking Cost</h1>
+        </div>
+        <div class="panel-body">
+          
+          <p><strong>1. 34 tours or more packages</strong> $8500</p>
+		    <p><strong>2. 24 tours packages</strong> $6000</p>
+			  <p><strong>3. 10 tours packages</strong> $4000</p>
+          
+        </div>
+        <div class="panel-footer">
+          
+          <button class="btn btn-lg">Select package 1</button>
+		  <button class="btn btn-lg">Select packge 2</button>
+		  <button class="btn btn-lg">Select packge 3</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> New York, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> exploreworld@hotmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+<form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
+<input name="skip_WhereToSend" type="hidden" value="your@email.com" />
+<input name="skip_SnapHostID" type="hidden" value="9YZ4X86ENBCR" />
+<input name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+<input name="skip_Subject" type="hidden" value="Contact Us Form" />
+<input name="skip_ShowUsersIp" type="hidden" value="1" />
+<input name="skip_SendCopyToUser" type="hidden" value="1" />
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") {alert('Name is required.');frm.Name.focus();return false;}
+if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+if (frm.Comments.value == "") {alert('Please enter comments or questions.');frm.Comments.focus();return false;}
+if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+return true; }
+function ReloadCaptchaImage(captchaImageId) {
+var obj = document.getElementById(captchaImageId);
+var src = '' + obj.src;
+obj.src = '';
+var date = new Date();
+var pos = src.indexOf('&rad=');
+if (pos >= 0) { src = src.substr(0, pos); }
+obj.src = src + '&rad=' + date.getTime();
+return false; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0" width="600">
+<tr>
+<td><b>Name*:</b></td>
+<td><input name="Name" type="text" maxlength="60" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Phone number:</b></td>
+<td><input name="PhoneNumber" type="text" maxlength="43" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Email address*:</b></td>
+<td><input name="FromEmailAddress" type="text" maxlength="60" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Comments and questions*:</b></td>
+<td><textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea></td>
+</tr><tr>
+<td colspan="2" align="center"> <br />
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" style="padding-bottom:18px;">
+<!-- Please check our ProCaptcha service which is ad-free:
+http://www.SnapHost.com/captcha/ProCaptchaOverview.aspx -->
+<a href="http://www.snaphost.com/captcha/captchaguestbook.aspx" alt="make a guestbook" title="make a guestbook">
+make a guestbook</a></td></tr>
+<tr valign="top"><td> <i>Enter web form code*:</i>
+<input name="skip_CaptchaCode" type="text" style="width:80px;" maxlength="6" />
+</td><td>
+<a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx"><img id="CaptchaImage" alt="Contact Us form" title="HTML code for Contact Us form"
+style="margin-left:20px;"
+src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=9YZ4X86ENBCR&ImgType=2" /></a><br />
+<a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a> </td></tr>
+</table> <br />
+* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<input name="skip_Submit" type="submit" value="Submit" />
+</td></tr>
+</table><br />
+</form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(40.7128,-74.0060);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUHRnUaIa9B3KNxYSztmI8DLcn34ZEBAA&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
